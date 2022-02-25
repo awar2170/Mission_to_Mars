@@ -125,8 +125,7 @@ def hemispheres(browser):
         img_soup_new = soup(html, 'html.parser')
 
         banana = img_soup_new.find('div', class_="downloads").find("li").find("a").get('href')
-        image_url = new_url + banana
-        image_url
+        image_url = url + banana
             
         info = {
             "image_url": image_url,
@@ -134,7 +133,7 @@ def hemispheres(browser):
         }
         hemisphere.append(info)
         
-    hemisphere
+    return hemisphere
 
 if __name__ == "__main__":
 
